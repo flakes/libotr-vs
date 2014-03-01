@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libgcrypt-HEAD\generated\gcrypt.h" />
+    <ClInclude Include="libgcrypt-HEAD\platform\config.h" />
+    <ClInclude Include="libgcrypt-HEAD\platform\libgcrypt-win32-defines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\cipher\hmac-tests.c" />
+    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hmac256.c" />
+    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hwf-x86.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\arcfour.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\blowfish.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\camellia-glue.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\camellia.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cast5.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-aeswrap.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-cbc.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-ccm.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-cfb.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-cmac.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-ctr.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-gcm.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-ofb.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher-selftest.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\cipher.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\crc.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\des.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\dsa-common.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\dsa.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc-curves.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc-ecdsa.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc-eddsa.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc-gost.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc-misc.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\ecc.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\elgamal.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\gost28147.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\gostr3411-94.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\hash-common.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\idea.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\kdf.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\mac-cmac.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\mac-gmac.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\mac-hmac.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\mac.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\md.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\md4.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\md5.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\primegen.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\pubkey-util.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\pubkey.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\rfc2268.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\rijndael.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\rmd160.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\rsa-common.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\rsa.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\salsa20.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\scrypt.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\seed.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\serpent.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\sha1.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\sha256.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\sha512.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\tiger.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\twofish.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\whirlpool.c" />
+    <ClCompile Include="libgcrypt-HEAD\compat\compat.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\ec-ed25519.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\ec.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-add1.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-lshift.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-mul1.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-mul2.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-mul3.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-rshift.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\generic\mpih-sub1.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-add.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-bit.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-cmp.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-div.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-gcd.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-inline.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-inv.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-mod.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-mpow.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-mul.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-pow.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpi-scan.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpicoder.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpih-div.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpih-mul.c" />
+    <ClCompile Include="libgcrypt-HEAD\mpi\mpiutil.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\random-csprng.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\random-fips.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\random-system.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\random.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\rndhw.c" />
+    <ClCompile Include="libgcrypt-HEAD\random\rndw32.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\ath.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\context.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\fips.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\global.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\hwfeatures.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\misc.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\missing-string.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\secmem.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\sexp.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\stdmem.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\visibility.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libgcrypt</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>libgcrypt-HEAD/generated;libgcrypt-HEAD/src;libgcrypt-HEAD/mpi;libgcrypt-HEAD/platform;$(SolutionDir)/libgpg-error/libgpg-error-HEAD/generated</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>libgcrypt-win32-defines.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>libgcrypt-HEAD/generated;libgcrypt-HEAD/src;libgcrypt-HEAD/mpi;libgcrypt-HEAD/platform;$(SolutionDir)/libgpg-error/libgpg-error-HEAD/generated</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>libgcrypt-win32-defines.h</ForcedIncludeFiles>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

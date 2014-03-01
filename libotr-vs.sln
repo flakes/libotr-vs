@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgpg-error", "libgpg-error\libgpg-error.vcxproj", "{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgcrypt", "libgcrypt\libgcrypt.vcxproj", "{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07} = {A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libotr", "libotr\libotr.vcxproj", "{6088223A-3EC9-4A55-8169-335F94AE226C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0} = {6FF57646-49F2-43EE-9AEE-1190D54C0FE0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug-DLL|Win32 = Debug-DLL|Win32
+		Release|Win32 = Release|Win32
+		Release-DLL|Win32 = Release-DLL|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Debug|Win32.Build.0 = Debug|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Debug-DLL|Win32.ActiveCfg = Debug-DLL|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Debug-DLL|Win32.Build.0 = Debug-DLL|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Release|Win32.ActiveCfg = Release|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Release|Win32.Build.0 = Release|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Release-DLL|Win32.ActiveCfg = Release-DLL|Win32
+		{A0A60AFF-1DBA-485E-8AEB-F919A2CE2D07}.Release-DLL|Win32.Build.0 = Release-DLL|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Debug|Win32.Build.0 = Debug|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Debug-DLL|Win32.ActiveCfg = Debug|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Debug-DLL|Win32.Build.0 = Debug|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Release|Win32.ActiveCfg = Release|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Release|Win32.Build.0 = Release|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Release-DLL|Win32.ActiveCfg = Release|Win32
+		{6FF57646-49F2-43EE-9AEE-1190D54C0FE0}.Release-DLL|Win32.Build.0 = Release|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Debug|Win32.Build.0 = Debug|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Debug-DLL|Win32.ActiveCfg = Debug|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Debug-DLL|Win32.Build.0 = Debug|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Release|Win32.ActiveCfg = Release|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Release|Win32.Build.0 = Release|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Release-DLL|Win32.ActiveCfg = Release|Win32
+		{6088223A-3EC9-4A55-8169-335F94AE226C}.Release-DLL|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
