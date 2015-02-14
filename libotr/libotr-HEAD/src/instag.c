@@ -90,7 +90,7 @@ gcry_error_t otrl_instag_read(OtrlUserState us, const char *filename)
  * OtrlUserState. The FILE* must be open for reading. */
 gcry_error_t otrl_instag_read_FILEp(OtrlUserState us, FILE *instf)
 {
-	if (!instf) { return gcry_error(GPG_ERR_NO_ERROR); }
+    if (!instf) return gcry_error(GPG_ERR_NO_ERROR);
 
     OtrlInsTag *p;
     char storeline[1000];

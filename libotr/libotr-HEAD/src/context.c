@@ -1,7 +1,8 @@
 /*
  *  Off-the-Record Messaging library
- *  Copyright (C) 2004-2012  Ian Goldberg, Rob Smits, Chris Alexander,
- *  			      Willy Lew, Lisa Du, Nikita Borisov
+ *  Copyright (C) 2004-2014  Ian Goldberg, David Goulet, Rob Smits,
+ *                           Chris Alexander, Willy Lew, Lisa Du,
+ *                           Nikita Borisov
  *                           <otr@cypherpunks.ca>
  *
  *  This library is free software; you can redistribute it and/or
@@ -248,7 +249,7 @@ ConnContext * otrl_context_find_recent_secure_instance(ConnContext * context)
  * add_app_data(data, context) so that app_data and app_data_free can be
  * filled in by the application, and set *addedp to 1.
  * In the 'their_instance' field note that you can also specify a 'meta-
- * instance' value such as OTRL_INSTAG_MASTER, OTRL_INSTAL_RECENT,
+ * instance' value such as OTRL_INSTAG_MASTER, OTRL_INSTAG_RECENT,
  * OTRL_INSTAG_RECENT_RECEIVED and OTRL_INSTAG_RECENT_SENT. */
 ConnContext * otrl_context_find(OtrlUserState us, const char *user,
 	const char *accountname, const char *protocol,
@@ -483,7 +484,7 @@ int otrl_context_forget(ConnContext *context)
 	for (c_iter = context; c_iter &&
 		c_iter->m_context == context->m_context;
 		c_iter = c_iter->next) {
-	    if (context->msgstate != OTRL_MSGSTATE_PLAINTEXT) return 1;
+	    if (c_iter->msgstate != OTRL_MSGSTATE_PLAINTEXT) return 1;
 	}
 
 	c_iter = context->next;

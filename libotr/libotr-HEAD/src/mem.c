@@ -1,7 +1,8 @@
 /*
  *  Off-the-Record Messaging library
- *  Copyright (C) 2004-2012  Ian Goldberg, Chris Alexander, Willy Lew,
- *  			     Nikita Borisov
+ *  Copyright (C) 2004-2014  Ian Goldberg, David Goulet, Rob Smits,
+ *                           Chris Alexander, Willy Lew, Lisa Du,
+ *                           Nikita Borisov
  *                           <otr@cypherpunks.ca>
  *
  *  This library is free software; you can redistribute it and/or
@@ -169,12 +170,11 @@ void otrl_mem_init(void)
 int otrl_mem_differ(const unsigned char *buf1, const unsigned char *buf2,
     size_t len)
 {
-    unsigned char diff = 0;
-    while (len) {
-	diff |= ((*buf1) ^ (*buf2));
-	++buf1;
-	++buf2;
-	--len;
+    volatile unsigned char diff = 0;
+    size_t i;
+
+    for (i = 0; i < len; ++i) {
+        diff |= (buf1[i] ^ buf2[i]);
     }
     return (diff != 0);
 }

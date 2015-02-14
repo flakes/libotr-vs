@@ -115,3 +115,13 @@ EXPORTS
 	otrl_userstate_create
 	otrl_userstate_free
 	otrl_version
+
+	; exporting some libgcrypt symbols here for convenience
+	gcry_check_version
+	gcry_control
+	gcry_strerror
+	gcry_strsource
+	gcry_err_code_from_errno
+	gcry_err_code_to_errno
+	gcry_err_make_from_errno
+	gcry_error_from_errno

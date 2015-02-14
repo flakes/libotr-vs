@@ -1,7 +1,8 @@
 /*
  *  Off-the-Record Messaging library
- *  Copyright (C) 2004-2012  Ian Goldberg, Rob Smits, Chris Alexander,
- *  			      Willy Lew, Lisa Du, Nikita Borisov
+ *  Copyright (C) 2004-2014  Ian Goldberg, David Goulet, Rob Smits,
+ *                           Chris Alexander, Willy Lew, Lisa Du,
+ *                           Nikita Borisov
  *                           <otr@cypherpunks.ca>
  *
  *  This library is free software; you can redistribute it and/or
@@ -441,8 +442,15 @@ fragment:
 	/* Fragment and send according to policy */
 	if (!err && messagep && *messagep) {
 	    if (context) {
+		char *rmessagep = NULL;
 		err = fragment_and_send(ops, opdata, context, *messagep,
-			fragPolicy, messagep);
+					fragPolicy, &rmessagep);
+		if (rmessagep) {
+		    /* Free the current message pointer and return back the
+		     * returned fragmented one. */
+		    free(*messagep);
+		    *messagep = rmessagep;
+		}
 	    }
 	}
 	return err;
@@ -930,7 +938,6 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
     OtrlMessageType msgtype;
     int context_added = 0;
     OtrlPolicy policy = OTRL_POLICY_DEFAULT;
-    int fragment_assembled = 0;
     char *unfragmessage = NULL, *otrtag = NULL;
     EncrData edata;
     otrl_instag_t our_instance = 0, their_instance = 0;
@@ -1014,7 +1021,6 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
 		return 1;
 	    case OTRL_FRAGMENT_COMPLETE:
 		/* We've got a new complete message, in unfragmessage. */
-		fragment_assembled = 1;
 		message = unfragmessage;
 		otrtag = strstr(message, "?OTR");
 		break;
@@ -1039,7 +1045,8 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
     if (((version == 3) && !(policy & OTRL_POLICY_ALLOW_V3))
 	|| ((version == 2) && !(policy & OTRL_POLICY_ALLOW_V2))
 	|| ((version == 1) && !(policy & OTRL_POLICY_ALLOW_V1))) {
-	    return 1;
+	    edata.ignore_message = 1;
+	    goto end;
     }
     /* Check the to and from instance tags */
     if (version == 3) {
@@ -1057,7 +1064,9 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
 			    OTRL_MSGEVENT_RCVDMSG_FOR_OTHER_INSTANCE,
 			    m_context, NULL, gcry_error(GPG_ERR_NO_ERROR));
 		}
-		return 1; /* ignore message intended for a different instance */
+		/* ignore message intended for a different instance */
+		edata.ignore_message = 1;
+		goto end;
 	    }
 
 	    if (their_instance >= OTRL_MIN_VALID_INSTAG) {
@@ -1069,7 +1078,8 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
 
 	if (err || their_instance < OTRL_MIN_VALID_INSTAG) {
 	    message_malformed(ops, opdata, context);
-	    return 1;
+	    edata.ignore_message = 1;
+	    goto end;
 	}
 
 	if (context_added) {
@@ -1091,7 +1101,8 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
 	    if (msgtype == OTRL_MSGTYPE_DH_KEY) {
 		otrl_auth_copy_on_key(&(m_context->auth), &(context->auth));
 	    } else if (msgtype != OTRL_MSGTYPE_DH_COMMIT) {
-		return 1;  /* Ignore unexpected message */
+		edata.ignore_message = 1;
+		goto end;
 	    }
 
 	    /* Update the context list */
@@ -1862,11 +1873,10 @@ int otrl_message_receiving(OtrlUserState us, const OtrlMessageAppOps *ops,
 	    break;
     }
 
+end:
     /* If we reassembled a fragmented message, we need to free the
      * allocated memory now. */
-    if (fragment_assembled) {
-	free(unfragmessage);
-    }
+    free(unfragmessage);
 
     if (edata.ignore_message == -1) edata.ignore_message = 0;
     return edata.ignore_message;

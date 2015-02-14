@@ -1,7 +1,8 @@
 /*
  *  Off-the-Record Messaging library
- *  Copyright (C) 2004-2012  Ian Goldberg, Rob Smits, Chris Alexander,
- *  			      Willy Lew, Lisa Du, Nikita Borisov
+ *  Copyright (C) 2004-2014  Ian Goldberg, David Goulet, Rob Smits,
+ *                           Chris Alexander, Willy Lew, Lisa Du,
+ *                           Nikita Borisov
  *                           <otr@cypherpunks.ca>
  *
  *  This library is free software; you can redistribute it and/or
@@ -466,6 +467,7 @@ gcry_error_t otrl_proto_instance(const char *otrmsg,
     free(bufp_head);
     return gcry_error(GPG_ERR_NO_ERROR);
 invval:
+    free(bufp_head);
     err = gcry_error(GPG_ERR_INV_VALUE);
     return err;
 }
