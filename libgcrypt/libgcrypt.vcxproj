@@ -16,9 +16,6 @@
     <ClInclude Include="libgcrypt-HEAD\platform\libgcrypt-win32-defines.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\cipher\hmac-tests.c" />
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hmac256.c" />
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hwf-x86.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\arcfour.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\blowfish.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\camellia-glue.c" />
@@ -48,6 +45,7 @@
     <ClCompile Include="libgcrypt-HEAD\cipher\gost28147.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\gostr3411-94.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\hash-common.c" />
+    <ClCompile Include="libgcrypt-HEAD\cipher\hmac-tests.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\idea.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\kdf.c" />
     <ClCompile Include="libgcrypt-HEAD\cipher\mac-cmac.c" />
@@ -111,6 +109,8 @@
     <ClCompile Include="libgcrypt-HEAD\src\context.c" />
     <ClCompile Include="libgcrypt-HEAD\src\fips.c" />
     <ClCompile Include="libgcrypt-HEAD\src\global.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\hmac256.c" />
+    <ClCompile Include="libgcrypt-HEAD\src\hwf-x86.c" />
     <ClCompile Include="libgcrypt-HEAD\src\hwfeatures.c" />
     <ClCompile Include="libgcrypt-HEAD\src\misc.c" />
     <ClCompile Include="libgcrypt-HEAD\src\missing-string.c" />

@@ -323,13 +323,13 @@
     <ClCompile Include="libgcrypt-HEAD\src\fips.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hmac256.c">
+    <ClCompile Include="libgcrypt-HEAD\src\hmac256.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\cipher\hmac-tests.c">
+    <ClCompile Include="libgcrypt-HEAD\src\hwf-x86.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\MinGW\msys\1.0\home\Satan\libgcrypt-3fa79ca\src\hwf-x86.c">
+    <ClCompile Include="libgcrypt-HEAD\cipher\hmac-tests.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
